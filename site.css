@@ -1,0 +1,31 @@
+@font-face{font-family:Instrument;src:url(/fonts/InstrumentSans-400.ttf);font-weight:400;font-display:swap}
+@font-face{font-family:Instrument;src:url(/fonts/InstrumentSans-600.ttf);font-weight:600;font-display:swap}
+@font-face{font-family:Instrument;src:url(/fonts/InstrumentSans-700.ttf);font-weight:700;font-display:swap}
+@font-face{font-family:Pixel;src:url(/fonts/PixelifySans-700.ttf);font-weight:700;font-display:swap}
+:root{--bg:#F3E9DC;--card:#FBF5EC;--ink:#1C1714;--muted:#6B5F55;--ember:#D7262E;--line:#1C1714}
+@media (prefers-color-scheme:dark){:root{--bg:#17120F;--card:#221B17;--ink:#F5EDE3;--muted:#B4A698;--ember:#FF4A4F;--line:#3A302A}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Instrument,system-ui,sans-serif}
+a{color:var(--ember);font-weight:600}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{padding:22px 0}
+header .wrap{display:flex;align-items:center;gap:12px}
+header img{width:40px;height:40px}
+header a.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:700 26px Pixel,Instrument,sans-serif}
+main{padding-bottom:40px}
+h1{font:700 clamp(34px,7vw,52px)/1.1 Pixel,Instrument,sans-serif;margin:18px 0 12px}
+h2{font-size:24px;line-height:1.25;margin:36px 0 8px}
+h3{font-size:19px;margin:24px 0 6px}
+p,li{color:var(--ink)}
+.lead{font-size:20px;color:var(--muted);max-width:34em}
+.card{background:var(--card);border:3px solid var(--line);border-radius:16px;box-shadow:5px 5px 0 var(--line);padding:22px;margin:20px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.grid .card{margin:0}
+.grid h3{margin-top:0}
+.btn{display:inline-block;background:var(--ember);color:#fff;text-decoration:none;border:3px solid var(--line);border-radius:14px;box-shadow:4px 4px 0 var(--line);padding:12px 20px;font-weight:700;margin:8px 10px 8px 0}
+.soon{display:inline-block;border:2px dashed var(--muted);border-radius:12px;padding:8px 14px;color:var(--muted);font-weight:600}
+.code{font:700 34px Pixel,monospace;letter-spacing:4px}
+footer{border-top:2px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:15px}
+footer a{margin-right:16px}
+.legal h1{font-size:clamp(30px,6vw,44px)}

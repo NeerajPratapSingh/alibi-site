@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alibi</title>
+<meta name="description" content="Alibi: gym accountability with your squad.">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="/"><img src="/icon.png" alt="">Alibi</a></div></header>
+<main class="wrap ">
+
+<div id="invite" hidden>
+<h1>You're invited to a squad</h1>
+<p class="lead">Install Alibi, then join with this code:</p>
+<p class="code" id="code"></p>
+<p><a class="btn" href="https://play.google.com/store/apps/details?id=fit.alibi.app">Get Alibi on Google Play</a></p>
+<p>Already have it? Open Alibi, go to Squad, and enter the code.</p>
+</div>
+<div id="profile" hidden>
+<h1 id="who"></h1>
+<p class="lead">is training with Alibi. Install the app to see their profile and join them.</p>
+<p><a class="btn" href="https://play.google.com/store/apps/details?id=fit.alibi.app">Get Alibi on Google Play</a></p>
+</div>
+<div id="missing">
+<h1>Page not found</h1>
+<p class="lead">That page doesn't exist. <a href="/">Go to the home page</a>.</p>
+</div>
+<script>
+(function () {
+  var p = location.pathname.split('/').filter(Boolean);
+  var clean = function (s) { return decodeURIComponent(s || '').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, 32); };
+  if (p[0] === 'j' && p[1]) {
+    document.getElementById('code').textContent = clean(p[1]).toUpperCase();
+    document.getElementById('invite').hidden = false;
+    document.getElementById('missing').hidden = true;
+    document.title = 'Join my squad on Alibi';
+  } else if (p[0] === 'u' && p[1]) {
+    document.getElementById('who').textContent = '@' + clean(p[1]);
+    document.getElementById('profile').hidden = false;
+    document.getElementById('missing').hidden = true;
+  }
+})();
+</script>
+
+</main>
+<footer><div class="wrap">
+<a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/delete-account/">Delete your account</a><a href="mailto:hello@alibi.fit">hello@alibi.fit</a>
+<p>Alibi is made by Neeraj Pratap Singh, Bengaluru, India.</p>
+</div></footer>
+</body>
+</html>

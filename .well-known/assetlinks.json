@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "fit.alibi.app",
+      "sha256_cert_fingerprints": [
+        "E1:DD:02:53:DE:9C:66:BA:44:94:EB:E3:B5:C9:A0:70:F4:FF:A0:A2:48:C3:CC:A7:A4:76:1A:49:C7:74:20:D9"
+      ]
+    }
+  }
+]
